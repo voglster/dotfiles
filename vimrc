@@ -7,7 +7,6 @@ call vundle#rc()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
-Plugin 'altercation/vim-colors-solarized'
 
 " plugins on github
 Plugin 'tpope/vim-fugitive'
@@ -17,6 +16,7 @@ Plugin 'tpope/vim-rails.git'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'benmills/vimux'
 Plugin 'kien/ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
