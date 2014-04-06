@@ -21,7 +21,10 @@ echo "done"
 
 for f in * 
 	do 
-		if [ $f != makesymlinks.sh ]; then 
+		if [ $f == makesymlinks.sh ] || [ $f == README.md ]
+		then
+			:
+		else
 			echo "Moving any existing dotfiles from ~ to $olddir"
 			mv ~/.$f $olddir/ 
 			echo "Creating symlink to $f in home directory."
