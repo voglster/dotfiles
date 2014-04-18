@@ -18,6 +18,7 @@ Plugin 'benmills/vimux'
 Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-surround' 
+Plugin 'vim-scripts/dbext.vim'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -39,6 +40,30 @@ set smartindent     " indent when
 set tabstop=2       " tab width
 set softtabstop=2   " backspace
 set shiftwidth=2    " indent width
+
+set encoding=utf-8
+set scrolloff=3
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set undofile
+
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+
 
 " quicker escape
 inoremap jk <esc>
@@ -67,6 +92,7 @@ nnoremap <F9> :!%:p<CR>
 
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
+nnoremap <leader><space> :noh<CR>
 
 " => Status line
 set laststatus=2
@@ -82,12 +108,16 @@ colorscheme solarized
 " Show hidden characters
 set listchars=tab:▸\ ,eol:¬
 nmap <leader>l :set list!<CR>
-set hidden
 
 " Line numbers
-set nu
-nmap <leader>n :set nu!<CR>
+set rnu
 
 " higlhlingting the cursor
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 nnoremap <Leader>v :read !xclip -o<CR>
+
+"nerdtree binding
+nnoremap <leader>d :NERDTreeToggle<CR>
+
+"quick verticle split
+nnoremap <leader>w <C-w>v<C-w>l
