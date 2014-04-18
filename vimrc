@@ -17,6 +17,7 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'benmills/vimux'
 Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -89,3 +90,6 @@ nmap <leader>n :set nu!<CR>
 
 " higlhlingting the cursor
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" nerdtree hotkey
+nnoremap <leader>d :NERDTreeToggle<CR>
