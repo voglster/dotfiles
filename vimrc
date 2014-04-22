@@ -19,6 +19,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-surround' 
 Plugin 'vim-scripts/dbext.vim'
+Plugin 'kana/vim-textobj-user'
+Plugin 'tmhedberg/matchit'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tomtom/tcomment_vim'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -40,6 +45,7 @@ set smartindent     " indent when
 set tabstop=2       " tab width
 set softtabstop=2   " backspace
 set shiftwidth=2    " indent width
+set expandtab
 
 set encoding=utf-8
 set scrolloff=3
@@ -91,7 +97,7 @@ map <F5> <Plug>(xmpfilter-run)
 nnoremap <F9> :!%:p<CR>
 
 let mapleader = ","
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>v :e $MYVIMRC<CR>
 nnoremap <leader><space> :noh<CR>
 
 " => Status line
@@ -114,10 +120,15 @@ set rnu
 
 " higlhlingting the cursor
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-nnoremap <Leader>v :read !xclip -o<CR>
 
 "nerdtree binding
 nnoremap <leader>d :NERDTreeToggle<CR>
 
 "quick verticle split
 nnoremap <leader>w <C-w>v<C-w>l
+
+"basic english dictionary
+set dictionary+=/usr/share/dict/words
+
+"database profiles
+let g:dbext_default_profile_luscinia='type=PGSQL:user=statslice:passwd=e4cc9634523a:dbname=ratatoskr_development:host=ratatoskr.cerdyv7ditcv.us-west-2.rds.amazonaws.com'
